@@ -21,6 +21,7 @@ function NoteClient({ initialNote }) {
 
     setLoading(true);
     try {
+      //request server for the taking the data and then server takes the data convert to json object saves in data base the sends the updated notes data and then the note data is updated to the the ui
       const response = await fetch("/api/notes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
